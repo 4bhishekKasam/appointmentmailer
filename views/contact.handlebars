@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mailer</title>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.42/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="uikit/js/components/datepicker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.42/js/uikit.min.js"></script>
+  <script src="uikit/dist/js/uikit-icons.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.42/js/uikit-icons.min.js"></script>
+</head>
+
+<body>
+<div class="uk-background-Secondary">
+    <nav class="uk-navbar-container" uk-navbar>
+    <div class="uk-navbar-left">
+        <ul class="uk-navbar-nav">
+            <li class="uk-text-large"><a href="#">
+         <h3> <b>Appointment</b><i style="font-family: 'Pacifico', cursive;color:#157ce4">Mailer</i> </h3></a></li>             
+        </ul>
+     </div>
+    </nav>
+</div>
+<br><br>
+<div class="uk-container">
+   {{!-- <h4 style="color:#485e74"><i> {{msg}} </i></h4> --}}
+<form class="uk-grid-small" uk-grid  method="POST" action="send" >
+    
+    <div class="uk-width-1-2@s ">
+        <input class="uk-input" type="text" name="name" placeholder="Name">
+    </div>
+    <div class="uk-width-1-4@s">
+        <input class="uk-input" type="number" name="age"   placeholder="Age">
+    </div>
+    <div class="uk-width-1-2@s">
+        <input class="uk-input" type="text" name="email" placeholder="Email">
+    </div>
+    <div class="uk-width-1-4@s">
+        <input class="uk-input" type="number" name="phone" placeholder="Phone no.">
+    </div>
+    <div class="uk-width-1-2@s">
+        <input class="uk-input" type="text" name="company" placeholder="Company">
+    </div>
+    <div class="uk-width-1-4@s">
+        <input class="uk-input" type="text" name="city"  placeholder="City">
+    </div>
+    <div class="uk-width-1-2@s">
+        <input class="uk-textarea" type="text"   name="reason" placeholder="Appointment reason">
+    </div>
+     <div class="uk-width-1-4@s">
+         <button class="uk-button uk-button-default uk-margin-small-right" type="button" uk-toggle="target: #modal-example">Terms and Conditions</button>
+     </div>
+
+    <!-- This is the modal -->
+    <div id="modal-example" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <h2 class="uk-modal-title">Terms and Conditions</h2>
+        <p>1. IF YOU ARE ENTERING INTO THESE TERMS OF USE ON BEHALF OF A COMPANY OR OTHER LEGAL ENTITY, YOU REPRESENT THAT YOU HAVE THE AUTHORITY TO BIND SUCH ENTITY AND ITS AFFILIATES TO THESE TERMS OF USE, IN WHICH CASE THE TERMS “YOU” AND “YOUR” REFERS TO SUCH ENTITY AND ITS AFFILIATES AND THEIR RESPECTIVE DIRECTORS, MANAGERS, SHAREHOLDERS, MEMBERS, OFFICERS, EMPLOYEES, CONTRACTORS, AND AGENTS</p>
+       <p>2. We may revise and update these Terms of Use from time to time in our sole discretion.</p>
+        <p class="uk-text-right">
+            <button class="uk-button uk-button-primary uk-modal-close" type="button">Cancel <span uk-icon="icon: close; ratio: 1"></span></button>
+           
+        </p>
+        </div>
+    </div>
+
+    <div class="uk-width-1-1@s">
+         <button class="uk-button uk-button-primary"
+        onclick="UIkit.notification({message: '<span uk-icon=\'icon: check\'></span> Message sent successfully',status:'success'})">
+         Submit <span uk-icon="icon: check; ratio: 1"></span></button>
+     </div>
+   
+</form>
+</div>
+
+<div class="uk-position-bottom" style="margin-bottom:14px">
+<hr class="uk-divider-icon">
+<center>Designed by <h4 style="font-family: 'Pacifico', cursive;color:#157ce4">Abhishek Konnur</h4></center>
+</div>
+</body>
+</html>
