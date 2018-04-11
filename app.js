@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
 const path = require('path');
 const nodemailer = require('nodemailer');
-
+var port = process.env.PORT || 8080;
 const app = express();
 
 // View engine setup
@@ -69,7 +69,7 @@ let mailOptions = {
 });
 });
 
-app.listen(3000, () => console.log('Server started...'));
+app.listen(port, () => console.log('Server started...'));
 
 
 
